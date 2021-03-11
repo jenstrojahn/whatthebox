@@ -7,7 +7,7 @@ loginButton.addEventListener("click", (e) => {
     // Prevent the default submission of the form
     e.preventDefault();
     // Get the values input by the user in the form fields
-    //const username = loginForm.username.value;
+    const username = loginForm.username.value;
     const password = loginForm.password.value;
 
     if (password === "thelostgold") {
