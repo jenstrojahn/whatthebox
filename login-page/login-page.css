@@ -149,11 +149,13 @@ html{
   #username-field {
     background-color: transparent;
     text-align: center;
+    color: #856d2a;
    
   }
   #password-field {
   background-color: transparent;
     text-align: center;
+    color: #856d2a;
     
   }
   
