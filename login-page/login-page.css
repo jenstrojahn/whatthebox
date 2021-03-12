@@ -2,40 +2,40 @@
 
 
 html{
-    height: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
   }
   
   body {
-    margin: auto;
     height: 100%;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    display: grid;
+    
 
     /*background-color: #121c29;*/
     background: linear-gradient(to bottom right, #14212e, #000000);
 
 }
-  
+ 
+.div {
+  margin: auto;
+  max-width: 500px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  white-space:nowrap;
+}
 
-  /* White rectangle in the middle of the screen */
-  
-  #main-holder {
-    margin: auto;
-    max-width: 500px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    /* background-color: white;*/
-    /* border-radius: 7px; */
-    /* box-shadow: 0px 0px 1px 1px black;*/
-  }
-  
-  /* -------------------------------------------------------------- */
-  
   #login-header {
 
     position: top;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    white-space: normal;
+    
+    text-align: center;
     font-family: 'Inconsolata', monospace;
     font-size: 4rem;
     font-weight: bold;
@@ -61,6 +61,14 @@ html{
     */
   }
 
+  #submarine {
+    padding: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+    width: 400px;
+  }
   
   /* -------------------------------------------------------------- */
   
@@ -78,14 +86,12 @@ html{
   /* Error message. By default it's transparent, but the opacity is controlled
   by JavaScript */
   
-#submarine {
-  padding: 10%;
-}
+
 
   #login-error-msg {
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin-bottom: 20px;
     padding: 2px;
     font-size: 12px;
     
@@ -131,7 +137,7 @@ html{
   /* Style the login button */
   
   #login-form-submit {
-    width: 100%;
+    width: 180px;
     padding: 7px;
     border: 0px;
     border-radius: 5px;
@@ -162,6 +168,9 @@ html{
   #thelostgold-footertext {
     position: bottom;
     text-align:center;
+    margin-top: 50px;
+    margin-bottom:30px;
+    margin-inline: 100px;
     font-family: 'Inconsolata', monospace;
     font-size: 2rem;
     font-weight: bold;
