@@ -21,7 +21,7 @@ html{
   /* White rectangle in the middle of the screen */
   
   #main-holder {
-    width: 40%;
+    width: 100%;
     height: 100%;
     display: grid;
     justify-items: center;
