@@ -13,7 +13,7 @@ html{
     display: grid;
 
     /*background-color: #121c29;*/
-    background: linear-gradient(to bottom right, #121c29, #000000);
+    background: linear-gradient(to bottom right, #14212e, #000000);
 
 }
   
@@ -79,7 +79,7 @@ html{
   by JavaScript */
   
 #submarine {
-  margin: 0;
+  padding: 10%;
 }
 
   #login-error-msg {
@@ -163,7 +163,7 @@ html{
     position: bottom;
     text-align:center;
     font-family: 'Inconsolata', monospace;
-    font-size: 10;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 5rem;
     background-image: linear-gradient(
@@ -178,6 +178,5 @@ html{
    );
     color:transparent;
     -webkit-background-clip:text;
-
 
   }
