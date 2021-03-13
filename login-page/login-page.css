@@ -66,9 +66,10 @@ html{
 
   #submarine {
     padding: 5%;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width:30rem;
   }
   
   /* -------------------------------------------------------------- */
