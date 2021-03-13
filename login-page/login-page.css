@@ -169,11 +169,11 @@ html{
   
   #thelostgold-footertext {
         font-family: 'Inconsolata', monospace;
-    font-size: 5rem;
+    font-size: 50px;
     font-weight: bold;
     margin-top: 100px;
     text-align: center;
-    letter-spacing: 2rem;
+    letter-spacing: 10px;
     background-image: linear-gradient(
    to right,
       #462523 0,
