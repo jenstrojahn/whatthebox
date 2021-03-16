@@ -13,7 +13,7 @@ loginButton.addEventListener("click", (e) => {
     if (password === "thelostgold") {
         // If the credentials are valid, show an alert box and reload the page
         alert("Du er på vej... tag dykkermasken på!");
-        location.reload();
+        window.location.href='../lobby/sample-multiple/index.html'
     } else {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;

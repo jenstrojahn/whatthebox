@@ -20,13 +20,22 @@ html{
     background: linear-gradient(to bottom right, #142033, #000000);
 
 }
- 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
 .div {
   margin: auto;
   max-width: 500px;
   display: inline-block;
   justify-items: center;
   align-items: center;
+  
   
 }
 
@@ -40,7 +49,7 @@ html{
     
     text-align: center;
     font-family: 'Inconsolata', monospace;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     letter-spacing: 5px;
     background-image: linear-gradient(
@@ -65,8 +74,8 @@ html{
   }
 
   #submarine {
-    padding: 5%;
-    display: grid;
+    padding: 2%;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width:25rem;
@@ -170,11 +179,14 @@ html{
   
   #thelostgold-footertext {
         font-family: 'Inconsolata', monospace;
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 100px;
-    text-align: center;
-    letter-spacing: 10px;
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        margin: 0 auto;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 30px;
     background-image: linear-gradient(
    to right,
       #462523 0,
