@@ -17,24 +17,16 @@ body {
 
 
 #robot {
-    margin-top: 50px;
-    
-    text-align: center;
+  display: flex block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
 }
 
-#participants1 {
-  
-  width: 30%;
-  float: left;
-  clear: none; 
-  margin-right: 200px;
-}
+.inner {
 
-#participants1 {
+  display: inline-block;
+  padding: 0 275px 0 275px;
   
-  width: 30%;
-  float: right;
-  clear: none; 
-  margin-left: 200px;
 
 }
