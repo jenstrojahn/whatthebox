@@ -64,11 +64,11 @@ video {
 
 video#video1 {
   margin: 0 20px 20px 0;
-  --width: 60%;
+  --width: 50%;
 }
 video.participant-videos {
   margin: 0 20px 20px 0;
-  --width: 15%;
+  --width: 10%;
 }
 
 .wrap-participants {
@@ -91,4 +91,27 @@ video.participant-videos {
     margin: 0 10px 10px 0;
   }
 
+}
+#thelostgold-footertext {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+letter-spacing: 30px;
+background-image: linear-gradient(
+to right,
+#462523 0,
+#cb9b51 22%, 
+#f6e27a 45%,
+#f6f2c0 5%,
+#f6e27a 55%,
+#cb9b51 78%,
+#462523 100%
+);
+color:transparent;
+-webkit-background-clip:text;
 }
