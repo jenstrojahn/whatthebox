@@ -20,7 +20,7 @@
 
     <base target="_blank">
 
-    <title>Peer connection</title>
+    <title>Multiple peer connections</title>
 
     <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
     <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
@@ -32,32 +32,28 @@
 <body>
 
 <div id="container">
-    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
-        <span>Peer connection</span></h1>
 
-    <p>This sample shows how to setup a connection between two peers using
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection">RTCPeerConnection</a>.
-    </p>
+    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a> <span>Multiple peer connections</span>
+    </h1>
 
-    <video id="localVideo" playsinline autoplay muted></video>
-    <video id="remoteVideo" playsinline autoplay></video>
+    <video id="video1" playsinline autoplay muted></video>
+    <video id="video2" playsinline autoplay></video>
+    <video id="video3" playsinline autoplay></video>
 
-    <div class="box">
+    <div>
         <button id="startButton">Start</button>
         <button id="callButton">Call</button>
         <button id="hangupButton">Hang Up</button>
     </div>
 
-    <p>View the console to see logging. The <code>MediaStream</code> object <code>localStream</code>, and the <code>RTCPeerConnection</code>
-        objects <code>pc1</code> and <code>pc2</code> are in global scope, so you can inspect them in the console as
-        well.</p>
+    <p>View the console to see logging and to inspect the <code>MediaStream</code> object <code>localStream</code>.</p>
 
     <p>For more information about RTCPeerConnection, see <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/"
                                                             title="HTML5 Rocks article about WebRTC by Sam Dutton">Getting
         Started With WebRTC</a>.</p>
 
 
-    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/pc1"
+    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/multiple"
        title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
 
 </div>
@@ -66,5 +62,6 @@
 <script src="js/main.js" async></script>
 
 <script src="../../../js/lib/ga.js"></script>
+
 </body>
 </html>
