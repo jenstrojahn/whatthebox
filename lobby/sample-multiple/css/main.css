@@ -28,7 +28,7 @@ html {
     
     text-align: center;
     font-family: 'Inconsolata', monospace;
-    font-size: 2rem;
+    font-size: 300%;
     font-weight: bold;
     letter-spacing: 5px;
     background-image: linear-gradient(to right,
@@ -48,6 +48,7 @@ html {
 /* Design af knapper */
   .buttons {
     text-align: center;
+    margin: 1%;
   }
 
   button {
@@ -69,17 +70,17 @@ html {
     height: calc(var(--width) * 0.75);
   }
 
-  video#video-robot {
+  video#video1 {
     margin: 0 20px 20px 0;
-    --width: 50%;
+    --width: 55%;
   }
 
-  video.participant-videos {
-    margin: 0 20px 20px 0;
+  video.participantvideos {
+    margin: 10px 75px 200px 75px;
     --width: 10%;
   }
 
-  .wrap-participants {
+  .wrapparticipants {
     display: flex block;
     justify-content: center;
     text-align: center;
@@ -113,6 +114,7 @@ html {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    margin-inline-end: 5%;
     letter-spacing: 30px;
     background-image: linear-gradient(
     to right,
