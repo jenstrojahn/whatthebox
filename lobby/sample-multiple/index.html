@@ -23,7 +23,6 @@
     <title>U-534 - The Lost Gold</title>
 
     <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../../../css/main.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 
@@ -36,34 +35,33 @@
 </head>
 
 <body>
-
-<div id="container">
-
     <h1 id="login-header">U-534</h1>
 
-    <div class="buttons">
-        <button id="startButton">Start</button>
-        <button id="callButton">Call</button>
-        <button id="hangupButton">Hang Up</button>
-    </div>    
+    <div id="wrapall">
+
+        <div class="buttons">
+            <button id="startButton">Start</button>
+            <button id="callButton">Call</button>
+            <button id="hangupButton">Hang Up</button>
+        </div>    
+        
         <div class="robot">
-            <video id="video1" playsinline autoplay muted></video>
+            <video id="video-robot" playsinline autoplay muted></video>
         </div>
+
         <div class="wrap-participants">
             <video class="participant-videos" id="video2" playsinline autoplay></video>
             <video class="participant-videos" id="video3" playsinline autoplay></video>
         </div>    
+        
+    </div>
+    
+    <p id="thelostgold-footertext">THE LOST GOLD</p>
 
 
-    <p>View the console to see logging and to inspect the <code>MediaStream</code> object <code>localStream</code>.</p>
-
-</div>
-<p id="thelostgold-footertext">THE LOST GOLD</p>
-
-<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-<script src="js/main.js" async></script>
-
-<script src="../../../js/lib/ga.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js" async></script>
+    <script src="../../../js/lib/ga.js"></script>
 
 </body>
 </html>
