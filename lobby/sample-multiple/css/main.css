@@ -5,6 +5,7 @@
  *  that can be found in the LICENSE file in the root of the source
  *  tree.
  */
+
 html {
   height: 100%;  
   background: linear-gradient( to bottom right, #142033, #000000);
@@ -54,71 +55,75 @@ html {
     width: 83px;
   }
 
+/* CSS for video */
 
-.robot {
-  display: flex block;
-  justify-content: center;
-  text-align: center;
-}
-
-video {
-  margin: 0 0 20px 0;
-  width: var(--width);
-  height: calc(var(--width) * 0.75);
-}
-
-video#video-robot {
-  margin: 0 20px 20px 0;
-  --width: 50%;
-}
-
-video.participant-videos {
-  margin: 0 20px 20px 0;
-  --width: 10%;
-}
-
-.wrap-participants {
-  display: flex block;
-  justify-content: center;
-  text-align: center;
-}
-
-@media screen and (max-width: 400px) {
-  button {
-    margin: 0 11px 10px 0;
+  .robot {
+    display: flex block;
+    justify-content: center;
+    text-align: center;
   }
 
   video {
-    height: 90px;
-    margin: 0 0 10px 0;
-    width: calc(50% - 8px);
+    margin: 0 0 20px 0;
+    width: var(--width);
+    height: calc(var(--width) * 0.75);
   }
 
-  video#video1 {
-    margin: 0 10px 10px 0;
+  video#video-robot {
+    margin: 0 20px 20px 0;
+    --width: 50%;
   }
 
-}
-#thelostgold-footertext {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0 auto;
-font-size: 30px;
-font-weight: bold;
-text-align: center;
-letter-spacing: 30px;
-background-image: linear-gradient(
-to right,
-#462523 0,
-#cb9b51 22%, 
-#f6e27a 45%,
-#f6f2c0 5%,
-#f6e27a 55%,
-#cb9b51 78%,
-#462523 100%
-);
-color:transparent;
--webkit-background-clip:text;
-}
+  video.participant-videos {
+    margin: 0 20px 20px 0;
+    --width: 10%;
+  }
+
+  .wrap-participants {
+    display: flex block;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 400px) {
+      button {
+        margin: 0 11px 10px 0;
+      }
+
+      video {
+        height: 90px;
+        margin: 0 0 10px 0;
+        width: calc(50% - 8px);
+      }
+
+      video#video1 {
+        margin: 0 10px 10px 0;
+      }
+
+  }
+
+/* CSS for footer */
+
+  #thelostgold-footertext {
+      font-family: 'Inconsolata', monospace;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 30px;
+    background-image: linear-gradient(
+    to right,
+    #462523 0,
+    #cb9b51 22%, 
+    #f6e27a 45%,
+    #f6f2c0 5%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+    );
+    color:transparent;
+    -webkit-background-clip:text;
+    }
