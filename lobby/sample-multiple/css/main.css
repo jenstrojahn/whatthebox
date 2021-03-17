@@ -80,7 +80,7 @@ html {
     --width: 10%;
   }
 
-  .wrapparticipants {
+  .wrapperticipants {
     display: flex block;
     justify-content: center;
     text-align: center;
