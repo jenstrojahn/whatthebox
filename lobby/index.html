@@ -38,46 +38,6 @@
 
     <h1 id="login-header">U-534</h1>
 
-    <script>
-        function errorMessage(message, e) {
-            console.error(message, typeof e == 'undefined' ? '' : e);
-            //alert(message);
-        }
-
-        if (location.protocol === 'https:') {
-            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-            if (navigator.getUserMedia) {
-                navigator.getUserMedia({ audio: true, video: true }, function (stream) {
-                    document.querySelector('video').src = window.URL.createObjectURL(stream);
-                    var mediaStreamTrack = stream.getVideoTracks()[0];
-                    if (typeof mediaStreamTrack != "undefined") {
-                        mediaStreamTrack.onended = function () {//for Chrome.
-                            errorMessage('Your webcam is busy!')
-                        }
-                    } else errorMessage('Permission denied!');
-                }, function (e) {
-                    var message;
-                    switch (e.name) {
-                        case 'NotFoundError':
-                        case 'DevicesNotFoundError':
-                            message = 'Please setup your webcam first.';
-                            break;
-                        case 'SourceUnavailableError':
-                            message = 'Your webcam is busy';
-                            break;
-                        case 'PermissionDeniedError':
-                        case 'SecurityError':
-                            message = 'Permission denied!';
-                            break;
-                        default: errorMessage('Reeeejected!', e);
-                            return;
-                    }
-                    errorMessage(message);
-                });
-            } else errorMessage('Uncompatible browser!');
-        } else errorMessage('Use https protocol for open this page.')
-  </script>
-
     <img id="submarine" src="media/submarine_footer4.png" alt="footer-image of submarine">
     
     <div id="wrapall">
