@@ -19,7 +19,7 @@
     <meta id="theme-color" name="theme-color" content="#ffffff">
 
     <base target="_blank">
-
+    
     <title>U-534 - The Lost Gold</title>
 
     <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
@@ -35,33 +35,53 @@
 </head>
 
 <body>
+    <div id="header">
+        <h1 id="headertext">U-534</h1>
 
-    <h1 id="login-header">U-534</h1>
+        <button id="startButton">Start</button>
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hang Up</button>
+
+    </div>
 
     <img id="submarine" src="media/submarine_footer4.png" alt="footer-image of submarine">
     
     <div id="wrapall">
+        <div id="participants">
+            <div id="Participant1">
+                <video class="participantvideos" id="video2" playsinline autoplay></video>   
+            </div>
 
-        <div class="buttons">
-            <button id="startButton">Start</button>
-            <button id="callButton">Call</button>
-            <button id="hangupButton">Hang Up</button>
-        </div>    
-        
-        <div class="robot">
-            <video id="video1" playsinline autoplay muted></video>
+            <Div id="Participant2">
+                <video class="participantvideos" id="video3" playsinline autoplay></video>
+            </Div>
         </div>
+        <video id="video1" playsinline autoplay muted> 
+        Din browser understøtter ikke video-afvikling. Prøv en anden browser. Your browser does not support the video tag.</video>
+           
 
-        <div class="wrapperticipants">
-            <video class="participantvideos" id="video2" playsinline autoplay></video>
-            <video class="participantvideos" id="video3" playsinline autoplay></video>
-        </div>    
         
     </div>
     
-    <p id="thelostgold-footertext">THE LOST GOLD</p>
+    <div id="footer">
+    
+        <p id="thelostgold-footertext">THE LOST GOLD</p>
+    
+    </div>
 
 
+    <script>
+        var elem = document.getElementById("myvideo");
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+        }
+    </script>
 
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script src="js/main.js" async></script>
