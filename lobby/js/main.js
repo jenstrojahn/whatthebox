@@ -8,12 +8,14 @@
 
 'use strict';
 
-const startButton = document.getElementById('startButton');
+/* const startButton = document.getElementById('startButton');*/
 const callButton = document.getElementById('callButton');
 const hangupButton = document.getElementById('hangupButton');
 callButton.disabled = true;
 hangupButton.disabled = true;
-startButton.onclick = start;
+/* startButton.onclick = start;*/
+window.onload = start;
+/* callButton.onclick = call; */
 callButton.onclick = call;
 hangupButton.onclick = hangup;
 

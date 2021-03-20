@@ -59,9 +59,10 @@
         <video id="video1" playsinline autoplay muted> 
         Din browser understøtter ikke video-afvikling. Prøv en anden browser. Your browser does not support the video tag.</video>
 
-        
+        <button id="fullscreenbutton" onclick="openFullscreen();">Udvid til fuld skærm</button>
     </div>
     
+ 
     <div id="footer">
     
         <p id="thelostgold-footertext">THE LOST GOLD</p>
@@ -70,7 +71,10 @@
 
 
     <script>
-        var elem = document.getElementById("myvideo");
+        /* Get the documentElement (<html>) to display the page in fullscreen */
+        var elem = document.getElementById("video1");
+        
+        /* View in fullscreen */
         function openFullscreen() {
           if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -80,7 +84,20 @@
             elem.msRequestFullscreen();
           }
         }
-    </script>
+        
+        /* Close fullscreen */
+        function closeFullscreen() {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+            element.removeAttribute("controls");
+          } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+            
+          }
+        }
+        </script>
 
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script src="js/main.js" async></script>
