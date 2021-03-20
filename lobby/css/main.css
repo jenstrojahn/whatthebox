@@ -13,7 +13,7 @@ body {
     width: 99%;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden; /* Hide scrollbars */
-  
+  margin: auto;
 }
 
 /* Overskrift */
@@ -21,6 +21,9 @@ body {
 #header {
   height:10vh;
   text-align: center;
+}
+#Submarine {
+
 }
 
 #headertext {
@@ -57,13 +60,17 @@ body {
   /* CSS for video */
 
   #wrapall {
+
     display: block;
     align-items: center;
-    padding-right: 2vh;
     height: 85%;
     /* background: green;*/
     position:relative;
     
+  }
+
+  #robot {
+
   }
 
   #video1 {
@@ -73,19 +80,18 @@ body {
     top: 0px;
     left: 0px;
     min-width: 100%;
-    min-height: 100%;
     max-height: 100%;
     max-width: 100%;
+    vertical-align:top;
+
+    
   }
 
   #video2 {
     /*margin: 0 20px 20px 0;*/
     /*--width: 100%;
     --height: 100%;*/
-    top: 0px;
-    left: 0px;
     min-width: 100%;
-    min-height: 100%;
     max-height: 100%;
     max-width: 100%;
   }
@@ -93,36 +99,40 @@ body {
     /*margin: 0 20px 20px 0;*/
     /*--width: 100%;
     --height: 100%;*/
-    top: 0px;
-    left: 0px;
-    min-width: 100%;
-    min-height: 100%;
     max-height: 100%;
     max-width: 100%;
+
   }
 
   #participants {
-    
+    margin: 1vh;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -11vh;
  }
 
   .participantvideos {
     /*margin: 10px 75px 200px 75px;*/
     /*--width: 10%;*/
-    width: 15vh;
-    height: 15vh;
+    
   }
 
 
   #Participant1 {  
-    position: absolute;
-    bottom: 1vh;
-    right: 28vh;
+    float: left;
+    margin: 1vh;
+    width: 10vh;
+    height: 10vh;
 }
 
 #Participant2 {
-    position: absolute;
-    bottom: 1vh;
-    right: 44.5vh;
+float: right;
+  margin: 1vh;
+width: 10vh;
+height: 10vh;
+
 }
 
 
