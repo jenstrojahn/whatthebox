@@ -61,8 +61,8 @@ body {
 
     display: block;
     align-items: center;
-    
-    height: 50%;
+    width: 100%;
+    height: 80%;
     /* background: green;*/
     position:relative;
     
@@ -126,7 +126,7 @@ height: 10vh;
 
 }
 
-
+/*
   @media screen and (max-width: 400px) {
       button {
         margin: 0 11px 10px 0;
@@ -143,7 +143,7 @@ height: 10vh;
       }
 
   }
-
+*/
 /* CSS for footer */
 
 #footer {
