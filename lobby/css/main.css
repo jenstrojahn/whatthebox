@@ -19,7 +19,7 @@ body {
 /* Overskrift */
 
 #header {
-  height:10vh;
+  height:9vh;
   text-align: center;
 }
 
@@ -50,6 +50,7 @@ body {
 
   button {
     width:70px;
+    
 
   }
 
@@ -64,7 +65,7 @@ body {
     height: 80%;
     /* background: green;*/
     position:relative;
-    margin: auto;
+    
     
   }
 
@@ -207,9 +208,5 @@ height: 10vh;
         bottom: 20px;
     left: 50%;
     margin-left:-75px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    
     }
