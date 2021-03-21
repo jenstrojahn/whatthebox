@@ -22,9 +22,6 @@ body {
   height:10vh;
   text-align: center;
 }
-#Submarine {
-
-}
 
 #headertext {
 
@@ -71,10 +68,6 @@ body {
     
   }
 
-  #robot {
-
-  }
-
   #video1 {
     /*margin: 0 20px 20px 0;*/
     /*--width: 100%;
@@ -115,11 +108,6 @@ body {
     margin-left: -11vh;
  }
 
-  .participantvideos {
-    /*margin: 10px 75px 200px 75px;*/
-    /*--width: 10%;*/
-    
-  }
 
 
   #Participant1 {  
@@ -172,6 +160,7 @@ height: 10vh;
     font-size: 3vh;
     font-weight: bold;
     text-align: center;
+    margin-left:15px;
     margin-inline-end: 5%;
     letter-spacing: 30px;
     background-image: linear-gradient(
@@ -197,7 +186,7 @@ height: 10vh;
     }
 
     #fullscreenbutton {
-      width: 135px;
+      width: 145px;
       background-image: linear-gradient(
         to right,
         #462523 0,
@@ -214,10 +203,10 @@ height: 10vh;
         
         font-weight: bold;
         border: 0;
-        
         position: absolute;
         bottom: 20px;
-    width: 100%;
+    left: 50%;
+    margin-left:-75px;
     text-align: center;
     display: flex;
     justify-content: center;
