@@ -63,8 +63,8 @@ body {
 
     display: block;
     align-items: center;
-    width: 75%;
-    height: 85%;
+    width: 99%;
+    height: 80%;
     /* background: green;*/
     position:relative;
     margin: auto;
@@ -214,7 +214,7 @@ height: 10vh;
         
         font-weight: bold;
         border: 0;
-        display: block;
+        
         position: absolute;
         bottom: 20px;
     width: 100%;
