@@ -207,6 +207,7 @@ height: 10vh;
         font-weight: bold;
         border: 0;        
         position: relative;
+        font-size: 1.8vh;
         
     left: 50%;
     margin-left:-75px;
