@@ -11,7 +11,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (password === "thelostgold") {
+    if (password === "BLITZ") {
         // If the credentials are valid, show an alert box and reload the page
         alert("Du er på vej... tag dykkermasken på!");
         window.location.href='http://185.227.111.120:3000/'
