@@ -86,7 +86,7 @@ io.on('connection', function (socket) {
   /**
    * Handler for messages to join a room.
    */
-  socket.on('join', function (room, callback,deltager) {
+  socket.on('join', function (room, callback) {
     room = _.toString(room);
 
     if (!room) {
@@ -102,8 +102,7 @@ io.on('connection', function (socket) {
     }
 
     log.debug('Socket %s joined room %s', socket.id, room);
-    if(deltager!="nobody") log.debug('Det er dykkeren!');
-
+    
     const roomSockets = ioUtils.getRoomSocketIds(io, room);
     callback && callback(null, roomSockets);
 

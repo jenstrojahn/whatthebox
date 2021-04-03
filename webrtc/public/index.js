@@ -136,10 +136,9 @@ $(function () {
     }, logError);
   }
 
-  function createPeerConnection(peerSocketId, isOffer, deltager) {
+  function createPeerConnection(peerSocketId, isOffer) {
     console.log('Creating peer connection for', peerSocketId);
-    deltager = deltager
-
+    
     const pc = new RTCPeerConnection(pcConfig);
     
     pcPeers[peerSocketId] = pc;
@@ -177,21 +176,13 @@ $(function () {
       if ($(elRemoteViewContainer).hasClass('hide')) {
         setVideoElementStream(event.stream, elRemoteView);
         $(elRemoteViewContainer).removeClass('hide');
-        if(deltager!="nobody"){
-          $(elRemoteViewContainer).addClass('dykker');
-        } else {
-          $(elRemoteViewContainer).addClass('nobody');
-        }
+        
       }
 else  
 {
   setVideoElementStream(event.stream, elRemoteView2);
   $(elRemoteViewContainer2).removeClass('hide');     
-  if(deltager!="nobody"){
-    $(elRemoteViewContainer2).addClass('dykker');
-  } else {
-    $(elRemoteViewContainer2).addClass('nobody');
-  }
+  
 }
 
     };
@@ -257,9 +248,9 @@ else
         }/**/
         // Ny feature, gør det for alle sockets!
         remoteSocketIds.forEach(element => {
-          createPeerConnection(remoteSocketId, true, deltager);
+          createPeerConnection(remoteSocketId, true);
         });
-      }, deltager);
+      });
     });
 
     $btnJoinRoom.removeClass('disabled');
