@@ -139,6 +139,7 @@ $(function () {
     console.log('Creating peer connection for', peerSocketId);
 
     const pc = new RTCPeerConnection(pcConfig);
+    erdykker=(new URLSearchParams(window.location.search).has("dykker"))
 
     pcPeers[peerSocketId] = pc;
 
@@ -148,7 +149,8 @@ $(function () {
       if (event.candidate) {
         socket.emit('candidate', {
           to: peerSocketId,
-          candidate: event.candidate
+          candidate: event.candidate,
+          dykker: erdykker
         });
       }
     };
