@@ -17,6 +17,7 @@ $(function () {
       navigator.webkitGetUserMedia ||
       navigator.msGetUserMedia;
 
+  const deltager = new URLSearchParams(window.location.search).get("deltager") || "nobody"
   const pcConfig = {
     iceServers: [{
       urls: 'stun:stun.l.google.com:19302'
@@ -135,12 +136,12 @@ $(function () {
     }, logError);
   }
 
-  function createPeerConnection(peerSocketId, isOffer) {
+  function createPeerConnection(peerSocketId, isOffer, deltager) {
     console.log('Creating peer connection for', peerSocketId);
+    deltager = deltager
 
     const pc = new RTCPeerConnection(pcConfig);
-    erdykker=(new URLSearchParams(window.location.search).has("dykker"))
-
+    
     pcPeers[peerSocketId] = pc;
 
     pc.onicecandidate = function (event) {
@@ -149,8 +150,7 @@ $(function () {
       if (event.candidate) {
         socket.emit('candidate', {
           to: peerSocketId,
-          candidate: event.candidate,
-          dykker: erdykker
+          candidate: event.candidate
         });
       }
     };
@@ -176,12 +176,22 @@ $(function () {
 
       if ($(elRemoteViewContainer).hasClass('hide')) {
         setVideoElementStream(event.stream, elRemoteView);
-        $(elRemoteViewContainer).removeClass('hide');      
+        $(elRemoteViewContainer).removeClass('hide');
+        if(deltager!="nobody"){
+          $(elRemoteViewContainer).addClass('dykker');
+        } else {
+          $(elRemoteViewContainer).addClass('nobody');
+        }
       }
 else  
 {
   setVideoElementStream(event.stream, elRemoteView2);
   $(elRemoteViewContainer2).removeClass('hide');     
+  if(deltager!="nobody"){
+    $(elRemoteViewContainer2).addClass('dykker');
+  } else {
+    $(elRemoteViewContainer2).addClass('nobody');
+  }
 }
 
     };
@@ -247,9 +257,9 @@ else
         }/**/
         // Ny feature, gør det for alle sockets!
         remoteSocketIds.forEach(element => {
-          createPeerConnection(remoteSocketId, true);
+          createPeerConnection(remoteSocketId, true, deltager);
         });
-      });
+      }, deltager);
     });
 
     $btnJoinRoom.removeClass('disabled');
