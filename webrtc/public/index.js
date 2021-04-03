@@ -236,11 +236,17 @@ else
         $(elCurrentRoomRow).find('#current-room').html(room);
         $(elCurrentRoomRow).removeClass('hide');
 
-        const remoteSocketId = _.head(remoteSocketIds);
 
+        // Tag første element i sockets-listen
+        /*const remoteSocketId = _.head(remoteSocketIds);
+        // Peer2Peer med den
         if (remoteSocketId) {
           createPeerConnection(remoteSocketId, true);
-        }
+        }/**/
+        // Ny feature, gør det for alle sockets!
+        remoteSocketIds.forEach(element => {
+          createPeerConnection(remoteSocketId, true);
+        });
       });
     });
 
