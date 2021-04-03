@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple WebRTC</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>BLITZ MISSIONS</title>
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+
    <!-- <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">-->
-    <link href="/index.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet"/>
+    
+
+    
+    <!-- Google fonts -->
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="center-align">
-            <h3>Simple WebRTC Server</h3>
-        </div>
+
+    <div class="container row header center-align">
+            
+            <h3 id="headertext">U357</h3>
+            
     </div>
-    <div id="input-room-row" class="row">
+
+<!--    <div id="input-room-row" class="row">
         <div class="">
             <div class="input-field">
                 <input id="room" type="text" class="validate">
@@ -26,34 +36,44 @@
                 </button>
             </div>
         </div>
-    </div>
-    <div id="current-room-row" class="row hide">
+    </div>-->
+    
+<!--    <div id="current-room-row" class="row hide">
         <div class="center-align">
-            <h5>
-                <i class="grey-text">Connected to room:</i>
-                <span id="current-room"></span>
-            </h5>
         </div>
-    </div>
-    <div class="row">
-        <div class="whatever">
-            <h5>Local</h5>
-            <video id="self-view" class="responsive-video width-100 z-depth-2" autoplay></video>
-        </div>
-        <div class="hide" id="remote-view-container">
-            <h5>Remote</h5>
-            <video class="remote" id="remote-view" class="responsive-video width-100 z-depth-2" autoplay></video>
+    </div>-->
+    <div id="wrapall" >
+
+    <div class="row" id="participants">
+    
+        <div class="hide" class="circleparticipants" id="remote-view-container Participant1">
+    
+            <video class="remote participantvideos" id="remote-view video2" class="responsive-video width-100 z-depth-2" autoplay></video>
             
         </div>
         
-        <div class="hide" id="remote-view-container2">
-            <video class="remote" id="remote-view2" class="responsive-video width-100 z-depth-2" autoplay></video>
+        <div class="hide" class="circleparticipants" id="remote-view-container2 Participant2">
+            <video class="remote participantvideos" id="remote-view2 video3" class="responsive-video width-100 z-depth-2" autoplay></video>
         </div>
 
+
     </div>
-    <div class="row">
-    </div>
+
+    <video id="video1" id="self-view" class="responsive-video width-100 z-depth-2 circlerobot" autoplay></video>
+
 </div>
+    <div class="row">
+        <button id="fullscreenbutton" onclick="openFullscreen();">Udvid til fuld skærm</button>
+    </div>
+
+</div>
+
+<div id="footer">
+    
+    <p id="thelostgold-footertext">BLITZ MISSION</p>
+
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>

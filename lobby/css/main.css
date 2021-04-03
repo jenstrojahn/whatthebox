@@ -48,6 +48,12 @@ body {
 
 /* Design af knapper */
 
+#input-room-row {
+  display: block;
+  margin: auto;
+  align-content: center;
+}
+
   .webrtcbuttons {
     width:70px;
     
