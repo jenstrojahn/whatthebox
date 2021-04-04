@@ -102,7 +102,7 @@ io.on('connection', function (socket) {
     }
 
     log.debug('Socket %s joined room %s', socket.id, room);
-
+    
     const roomSockets = ioUtils.getRoomSocketIds(io, room);
     callback && callback(null, roomSockets);
 

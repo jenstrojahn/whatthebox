@@ -17,6 +17,7 @@ $(function () {
       navigator.webkitGetUserMedia ||
       navigator.msGetUserMedia;
 
+  const deltager = new URLSearchParams(window.location.search).get("deltager") || "nobody"
   const pcConfig = {
     iceServers: [{
       urls: 'stun:stun.l.google.com:19302'
@@ -137,10 +138,9 @@ $(function () {
 
   function createPeerConnection(peerSocketId, isOffer) {
     console.log('Creating peer connection for', peerSocketId);
-
+    
     const pc = new RTCPeerConnection(pcConfig);
-    erdykker=(new URLSearchParams(window.location.search).has("dykker"))
-
+    
     pcPeers[peerSocketId] = pc;
 
     pc.onicecandidate = function (event) {
@@ -149,8 +149,7 @@ $(function () {
       if (event.candidate) {
         socket.emit('candidate', {
           to: peerSocketId,
-          candidate: event.candidate,
-          dykker: erdykker
+          candidate: event.candidate
         });
       }
     };
@@ -176,12 +175,14 @@ $(function () {
 
       if ($(elRemoteViewContainer).hasClass('hide')) {
         setVideoElementStream(event.stream, elRemoteView);
-        $(elRemoteViewContainer).removeClass('hide');      
+        $(elRemoteViewContainer).removeClass('hide');
+        
       }
 else  
 {
   setVideoElementStream(event.stream, elRemoteView2);
   $(elRemoteViewContainer2).removeClass('hide');     
+  
 }
 
     };
