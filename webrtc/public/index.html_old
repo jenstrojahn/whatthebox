@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <title>Simple WebRTC</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+   <!-- <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">-->
     <link href="/index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col s12 center-align">
+        <div class="center-align">
             <h3>Simple WebRTC Server</h3>
         </div>
     </div>
     <div id="input-room-row" class="row">
-        <div class="col s12">
+        <div class="">
             <div class="input-field">
                 <input id="room" type="text" class="validate">
                 <label for="room">Room</label>
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div id="current-room-row" class="row hide">
-        <div class="col s12 center-align">
+        <div class="center-align">
             <h5>
                 <i class="grey-text">Connected to room:</i>
                 <span id="current-room"></span>
@@ -36,19 +36,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s12 m6">
+        <div class="whatever">
             <h5>Local</h5>
             <video id="self-view" class="responsive-video width-100 z-depth-2" autoplay></video>
         </div>
-
-        <div class="col s12 m6 hide" id="remote-view-container">
+        <div class="hide" id="remote-view-container">
             <h5>Remote</h5>
-            <video id="remote-view" class="responsive-video width-100 z-depth-2" autoplay></video>
+            <video class="remote" id="remote-view" class="responsive-video width-100 z-depth-2" autoplay></video>
+            
+        </div>
+        
+        <div class="hide" id="remote-view-container2">
+            <video class="remote" id="remote-view2" class="responsive-video width-100 z-depth-2" autoplay></video>
         </div>
 
-        <div class="col s12 m6 hide" id="remote-view-container2">
-            <video id="remote-view2" class="responsive-video width-100 z-depth-2" autoplay></video>
-        </div>
     </div>
     <div class="row">
     </div>
