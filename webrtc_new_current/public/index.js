@@ -171,7 +171,18 @@ $(function () {
 
     pc.onaddstream = function (event) {
       console.log('onaddstream', event);
-      if (elRemoteViewContainer.classList.contains('available')) {
+      
+      // Brug enten den ene eller den anden container
+      container = $('#remote-view-container').hasClass('available') ? $('#remote-view-container') : $('#remote-view-container2');
+      videoelem = $('#remote-view-container').hasClass('available') ? elRemoteView : elRemoteView2
+      console.log(videoelem.id)
+      // Fjern relevante classes
+      container.removeClass('hide');
+      container.removeClass('available');
+      // .. og omdirigér videostrøm
+      setVideoElementStream(event.stream, videoelem);
+
+      /*if (elRemoteViewContainer.hasClass('available')) {
           setVideoElementStream(event.stream, elRemoteView);
           elRemoteViewContainer.removeClass('hide');
           elRemoteViewContainer.removeClass('available');
@@ -180,9 +191,9 @@ $(function () {
           setVideoElementStream(event.stream, elRemoteView2);
           elRemoteViewContainer2.removeClass('hide');
           elRemoteViewContainer2.removeClass('available');
-        }
+        }/**/
       };
-
+    
     pc.addStream(localStream);
 
     return pc;
