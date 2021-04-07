@@ -45,7 +45,9 @@ $(function () {
 
   const elSelfView = document.getElementById('self-view');
   const elRemoteView = document.getElementById('remote-view');
+  const elRemoteView2 = document.getElementById('remote-view2');
   const elRemoteViewContainer = document.getElementById('remote-view-container');
+  const elRemoteViewContainer2 = document.getElementById('remote-view-container2');
   const elInputRoomRow = document.getElementById('input-room-row');
   const elCurrentRoomRow = document.getElementById('current-room-row');
 
@@ -169,9 +171,17 @@ $(function () {
 
     pc.onaddstream = function (event) {
       console.log('onaddstream', event);
-      setVideoElementStream(event.stream, elRemoteView);
-      $(elRemoteViewContainer).removeClass('hide');
-    };
+      if (elRemoteViewContainer.classList.contains('available')) {
+          setVideoElementStream(event.stream, elRemoteView);
+          elRemoteViewContainer.removeClass('hide');
+          elRemoteViewContainer.removeClass('available');
+        }
+        else {
+          setVideoElementStream(event.stream, elRemoteView2);
+          elRemoteViewContainer2.removeClass('hide');
+          elRemoteViewContainer2.removeClass('available');
+        }
+      };
 
     pc.addStream(localStream);
 

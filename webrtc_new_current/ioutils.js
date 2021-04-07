@@ -31,7 +31,7 @@ function getRoomSocketIds(io, room) {
  * @return {boolean}
  */
 function isRoomFull(io, room) {
-  return getRoomSockets(io, room).length >= 2;
+  return getRoomSockets(io, room).length >= 5;
 }
 
 /**
