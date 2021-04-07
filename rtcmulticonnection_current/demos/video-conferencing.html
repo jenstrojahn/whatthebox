@@ -6,47 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="/demos/logo.png">
   <link rel="stylesheet" href="/demos/stylesheet.css">
+  <link rel="stylesheet" href="css/main.css"/>
+
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+
+
   <script src="/demos/menu.js"></script>
 </head>
 <body>
   <header>
-    <a class="logo" href="/"><img src="/demos/logo.png" alt="RTCMultiConnection"></a>
-    <a href="/" class="menu-explorer">Menu<img src="/demos/menu-icon.png" alt="Menu"></a>
-    <nav>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/demos/">Demos</a>
-      </li>
-      <li>
-        <a href="https://www.rtcmulticonnection.org/docs/getting-started/">Getting Started</a>
-      </li>
-      <li>
-        <a href="https://www.rtcmulticonnection.org/FAQ/">FAQ</a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/playlist?list=PLPRQUXAnRydKdyun-vjKPMrySoow2N4tl">YouTube</a>
-      </li>
-      <li>
-        <a href="https://github.com/muaz-khan/RTCMultiConnection/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://github.com/muaz-khan/RTCMultiConnection">Github</a>
-      </li>
-    </nav>
+  
   </header>
 
-  <h1>
-    Video Conferencing using RTCMultiConnection
-    <p class="no-mobile">
-      Multi-user (many-to-many) video chat using mesh networking model.
-    </p>
-  </h1>
+  <h1 id="headertext">U357</h1>
 
   <section class="make-center">
     <div>
-      <label><input type="checkbox" id="record-entire-conference"> Record Entire Conference In The Browser?</label>
+    <!--  <label><input type="checkbox" id="record-entire-conference"> Record Entire Conference In The Browser?</label>-->
       <span id="recording-status" style="display: none;"></span>
       <button id="btn-stop-recording" style="display: none;">Stop Recording</button>
       <br><br>
@@ -56,6 +35,27 @@
       <button id="join-room">Join Room</button>
       <button id="open-or-join-room">Auto Open Or Join Room</button>
     </div>
+
+    
+        
+      
+    
+          <div class="circleparticipants" id="Participant1">
+              
+          </div>
+
+          <Div class="circleparticipants" id="Participant2">
+              
+          </Div>
+    
+      
+      <video class="circlerobot" id="video1" playsinline autoplay muted> 
+        Din browser understøtter ikke video-afvikling. Prøv en anden browser. Your browser does not support the video tag.</video>
+      
+  
+  
+</div>
+<button id="fullscreenbutton" onclick="openFullscreen();">Udvid til fuld skærm</button>
 
     <div id="videos-container" style="margin: 20px 0;"></div>
 
@@ -266,10 +266,42 @@ connection.onstream = function(event) {
         title: event.userid,
         buttons: ['full-screen'],
         width: width,
-        showOnMouseEnter: false
+        showOnMouseEnter: false,
+         
     });
 
+    mediaElement.classList.add("circleparticipants")
+//    const videocontainer = $('#Participant1').hasChildNodes() ? $('#Participant2') : $('#Participant1');
+/*
+var videocontainer
+
+console.log('tildel video')
+
+    p1 = $('#Participant1')
+    p2 = $('#Participant2')
+
+    console.log(p1)
+    console.log(p2)
+
+    p1brugt = p1.hasChildNodes();
+    console.log(p1brugt)
+
+    if (p1brugt) {
+      videocontainer = p2;
+    }
+    else {
+      videocontainer = p1;
+    }
+
+    console.log(videocontainer)
+
+
+    
+
+    videocontainer.appendChild(mediaElement);
+*/
     connection.videosContainer.appendChild(mediaElement);
+
 
     setTimeout(function() {
         mediaElement.media.play();
