@@ -4677,8 +4677,11 @@ var RTCMultiConnection = function(roomid, forceOptions) {
         } else {
             connection.closeBeforeUnload = false;
         }
-
-        connection.userid = getRandomString();
+        // Tjek for parameter "dykker"
+        let searchParams = new URLSearchParams(window.location.search)
+        // Set userid = "dykker" eller et random id.
+        let id = searchParams.has('dykker')?"dykker":getRandomString();
+        connection.userid = id;
         connection.changeUserId = function(newUserId, callback) {
             callback = callback || function() {};
             connection.userid = newUserId || getRandomString();
